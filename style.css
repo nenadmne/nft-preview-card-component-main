@@ -1,0 +1,189 @@
+* {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+}
+
+body, html {
+    width: 100%;
+    height: fit-content;
+}
+
+body, main, .value-div, .creator-div, .currency, .time, .clock-div, .ether-div, .text-div{
+    display: flex;
+}
+
+.value-div, .creator-div, .currency, .time, .text-div {
+    flex-direction: row;
+}
+
+body, main, .img-div{
+    box-sizing: border-box;
+}
+
+body, .img-div {
+    margin: 0;
+}
+
+body {
+    padding: 15% 5%;
+    min-width: 375px;
+}
+
+.img-div {
+    padding: 7% 7% 7% 7%;
+    position: relative;
+}
+
+main {
+    flex-direction: column;
+    background-color: hsl(216, 50%, 16%);
+    height:fit-content;
+}
+
+.value-div {
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    margin: 0 7%;
+    padding-bottom: 7%;
+}
+
+.para-div p, .value-div, .creator-div {
+    margin-bottom: 7%;
+}
+
+.img-div img, main {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.para-div, .creator-div {
+    padding: 0 7%;
+}
+
+.currency, .time {
+    text-align: center;
+    flex-basis: 50%;
+}
+
+.currency p, .time p{
+    margin: 0;
+    align-self: center;
+    font-size: 0.9rem;
+}
+
+.clock-div, .ether-div {
+    justify-content: center;
+}
+
+.currency {
+    justify-content: left;
+}
+
+.currency img {
+    margin-right: 0.5rem;
+}
+
+.currency p {
+    color:hsl(178, 100%, 50%);
+    font-weight: 400;
+}
+
+.time {
+    justify-content: right;
+}
+
+.time p {
+    margin-left: 0.5rem;
+}
+
+.para-div h1, .white {
+    color: white;
+}
+
+.para-div h1 {
+    font-size: 1.4rem;
+    margin: 5% 0;
+    font-weight: 600;
+}
+
+.para-div p, .time p, .grey {
+    color:hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+.para-div p {
+    line-height: 1.5rem;
+}
+
+.creator-div img {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.text-div, .grey, .white{
+    align-self: center;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+.grey {
+    margin-right: 0.2rem;
+}
+
+.img-div:hover:before, .img-div:hover:after {
+    position: absolute;
+    cursor: pointer;
+}
+
+.img-div:hover:after {
+    content:"";
+    top:7%;
+    left:7%;
+    height:85%;
+    width:86%;
+    background: hsl(178, 100%, 50%);
+    border-radius: 1rem;
+    opacity: 0.5;
+
+}
+
+.img-div:hover:before {
+    content: url(./images/icon-view.svg);
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: 7% contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1:hover, .white:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+@media (min-width:376px) {
+    main, .img-div {
+        width: 375px;
+    }
+    
+    body, html {
+        height: 100%;
+    }
+
+    body{
+        padding: 0%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
